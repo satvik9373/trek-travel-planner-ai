@@ -81,23 +81,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
       {/* Navigation */}
-      <nav className="px-6 py-5 bg-white/80 backdrop-blur-sm">
+      <nav className="px-6 py-4 bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <img 
               src="/Images/trek-logo.png" 
               alt="Trek Logo" 
-              className="h-12 w-12 object-contain"
+              className="h-8 w-8 object-contain"
             />
-         
+           
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={navigateToChat} className="text-gray-700 hover:text-gray-900 transition-colors font-medium tracking-wide px-2 py-1">AI Chat</button>
-            <button onClick={navigateToPlanTrip} className="text-gray-700 hover:text-gray-900 transition-colors font-medium tracking-wide px-2 py-1">Plan Trip</button>
-            <button onClick={navigateToDashboard} className="text-gray-700 hover:text-gray-900 transition-colors font-medium tracking-wide px-2 py-1">Dashboard</button>
-            <button onClick={navigateToRealTime} className="text-gray-700 hover:text-gray-900 transition-colors font-medium tracking-wide px-2 py-1">Real-time</button>
-            <button onClick={navigateToPWA} className="text-gray-700 hover:text-gray-900 transition-colors font-medium tracking-wide px-2 py-1">PWA</button>
+            <button onClick={navigateToChat} className="text-gray-700 hover:text-gray-900 transition-colors">AI Chat</button>
+            <button onClick={navigateToPlanTrip} className="text-gray-700 hover:text-gray-900 transition-colors">Plan Trip</button>
+            <button onClick={navigateToDashboard} className="text-gray-700 hover:text-gray-900 transition-colors">Dashboard</button>
+            <button onClick={navigateToRealTime} className="text-gray-700 hover:text-gray-900 transition-colors">Real-time</button>
+            <button onClick={navigateToPWA} className="text-gray-700 hover:text-gray-900 transition-colors">PWA</button>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -160,26 +160,26 @@ const Index = () => {
           </div>
 
           {/* Main Headline */}
-          <div className="space-y-8 mb-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-wide">
+          <div className="space-y-6 mb-12">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
               AI-Powered{' '}
               <span className="text-blue-500 italic">Travel Planning</span>
               <br />
               Made Simple
             </h1>
             
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed tracking-wide font-light">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Experience personalized itineraries, real-time updates, seamless bookings, 
               and AI assistance—all in one comprehensive travel companion.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="mb-16 space-y-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mb-12 space-y-4">
+            <div>
               <Button 
                 onClick={handleStartPlanning}
-                className="bg-black text-white px-10 py-5 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors h-auto tracking-wide"
+                className="bg-black text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors h-auto mr-4"
               >
                 {user ? 'Continue Planning' : 'Start Planning My Trip'}
               </Button>
@@ -187,7 +187,7 @@ const Index = () => {
                 <Button 
                   onClick={navigateToChat}
                   variant="outline"
-                  className="px-10 py-5 rounded-lg text-lg font-medium h-auto tracking-wide"
+                  className="px-8 py-4 rounded-lg text-lg font-medium h-auto"
                 >
                   Try AI Chat
                 </Button>
@@ -196,14 +196,14 @@ const Index = () => {
             
             {/* Feature Navigation */}
             {user && (
-              <div className="flex flex-wrap justify-center gap-4 mt-10">
-                <Button onClick={navigateToDashboard} variant="outline" className="h-auto py-3 px-6 text-base font-medium tracking-wide">
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                <Button onClick={navigateToDashboard} variant="outline" className="h-auto py-2 px-4">
                   📊 Dashboard
                 </Button>
-                <Button onClick={navigateToChat} variant="outline" className="h-auto py-3 px-6 text-base font-medium tracking-wide">
+                <Button onClick={navigateToChat} variant="outline" className="h-auto py-2 px-4">
                   🤖 AI Chat
                 </Button>
-                <Button onClick={navigateToRealTime} variant="outline" className="h-auto py-3 px-6 text-base font-medium tracking-wide">
+                <Button onClick={navigateToRealTime} variant="outline" className="h-auto py-2 px-4">
                   ⚡ Real-time Features
                 </Button>
                 <Button onClick={navigateToPWA} variant="outline" className="h-auto py-2 px-4">
