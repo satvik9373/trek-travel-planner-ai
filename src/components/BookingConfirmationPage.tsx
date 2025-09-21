@@ -103,12 +103,17 @@ const BookingConfirmationPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
+              <img 
+                src="/Images/trek-logo.png" 
+                alt="Trek Logo" 
+                className="h-10 w-10 object-contain"
+              />
               <div className="p-2 bg-green-100 rounded-full">
                 <CheckCircle className="h-6 w-6 text-green-600" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Booking Confirmed!</h1>
-                <p className="text-gray-600">Your trip has been successfully booked</p>
+                <h1 className="text-2xl font-bold text-gray-900 tracking-wide">Booking Confirmed!</h1>
+                <p className="text-gray-600 tracking-wide">Your trip has been successfully booked</p>
               </div>
             </div>
             

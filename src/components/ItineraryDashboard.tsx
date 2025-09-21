@@ -109,8 +109,15 @@ const ItineraryDashboard = ({ tripData, onBack, onBooking, onAdjustments }: Itin
           </Button>
           
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-foreground">Your {itinerary.destination} Adventure</h1>
-            <p className="text-muted-foreground">{itinerary.totalDays} days • ${itinerary.totalBudget} budget</p>
+            <div className="flex items-center justify-center space-x-3 mb-2">
+              <img 
+                src="/Images/trek-logo.png" 
+                alt="Trek Logo" 
+                className="h-8 w-8 object-contain"
+              />
+              <h1 className="text-2xl font-bold text-foreground tracking-wide">Your {itinerary.destination} Adventure</h1>
+            </div>
+            <p className="text-muted-foreground tracking-wide">{itinerary.totalDays} days • ${itinerary.totalBudget} budget</p>
           </div>
           
           <div className="flex space-x-2">
