@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Outfit', 'sans-serif'],
+        sans: ['Coolvetica', 'Outfit', 'sans-serif'],
         outfit: ['Outfit', 'sans-serif'],
+        coolvetica: ['Coolvetica', 'Outfit', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,9 +1,18 @@
+/* Fallback Outfit Font - Must be first */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Coolvettica-style Font (using Outfit as substitute) */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+/* Custom Coolvetica Font */
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/coolvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Travel-Themed Design System - Solid colors only, no gradients */
 @layer base {
@@ -113,12 +122,12 @@
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Coolvetica', 'Outfit', sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Coolvetica', 'Outfit', sans-serif;
   }
 
   /* Travel-themed component utilities */

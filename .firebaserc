@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "trek-2025"
+  },
+  "targets": {
+    "trek-2025": {
+      "hosting": {
+        "production": [
+          "trek-2025"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
