@@ -2,41 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Coolvettica-style Font (using Outfit as substitute) */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
+/* Travel-Themed Design System - Solid colors only, no gradients */
 @layer base {
   :root {
+    /* Base Colors - Crisp white background with travel-inspired palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 220 13% 18%;
+    
+    /* Travel-inspired primary - Sky blue */
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 207 90% 48%;
+    
+    /* Secondary - Sand beige */
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 220 13% 18%;
+    --secondary-hover: 35 25% 82%;
+    
+    /* Accent colors - Travel themed */
+    --accent-terracotta: 14 85% 60%;
+    --accent-terracotta-foreground: 0 0% 100%;
+    --accent-ocean: 194 85% 45%;
+    --accent-ocean-foreground: 0 0% 100%;
+    --accent-warm: 25 95% 65%;
+    --accent-warm-foreground: 0 0% 100%;
+    
+    /* Neutral colors */
+    --muted: 220 8% 96%;
+    --muted-foreground: 220 8% 46%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 207 90% 54%;
+    
+    /* Card colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --card-foreground: 220 13% 18%;
+    --card-border: 220 13% 91%;
+    
+    /* States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Spacing and layout */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -97,9 +113,42 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Outfit', sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Travel-themed component utilities */
+  .travel-spacing {
+    @apply space-y-6;
+  }
+  
+  .travel-card {
+    @apply bg-card border border-card-border rounded-2xl p-6;
+  }
+  
+  .travel-input {
+    @apply w-full px-4 py-3 bg-background border border-input rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+  
+  .travel-button-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-xl font-medium transition-colors;
+  }
+  
+  .travel-button-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 py-3 rounded-xl font-medium transition-colors;
+  }
+  
+  .travel-button-terracotta {
+    @apply px-6 py-3 rounded-xl font-medium transition-colors;
+    background-color: hsl(var(--accent-terracotta));
+    color: hsl(var(--accent-terracotta-foreground));
+  }
+  
+  .travel-button-terracotta:hover {
+    background-color: hsl(var(--accent-terracotta) / 0.9);
   }
 }
